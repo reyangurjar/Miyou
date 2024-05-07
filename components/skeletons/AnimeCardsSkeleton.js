@@ -47,20 +47,13 @@ function AnimeCardsSkeleton() {
         {[...Array(8)].map((x, i) => (
           <SwiperSlide key={i}>
             <Skeleton
-            //   width={
-            //     width <= 600 ? (width <= 400 ? "100px" : "120px") : "160px"
-            //   }
-            //   height={
-            //     width <= 600 ? (width <= 400 ? "160px" : "180px") : "235px"
-            //   }
-              className="w-40 h-60 inline-flex"
+              className=" w-28 h-44 sm:w-40 sm:h-60"
               borderRadius={"0.5rem"}
               baseColor={"#262539"}
               highlightColor={"#34324D"}
             />
             <Skeleton
-            //   width={width <= 600 ? "120px" : "160px"}
-              className="w-40 h-10 "
+              className="w-28  sm:w-40  "
               baseColor={"#262539"}
               highlightColor={"#34324D"}
               count={2}
