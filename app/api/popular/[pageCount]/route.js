@@ -1,15 +1,17 @@
-import { TrendingAnimeQuery } from "@/hooks/searchQueryStrings";
+import { PopularAnimeQuery } from "@/hooks/searchQueryStrings";
 import {request} from "graphql-request"
 import { NextResponse } from "next/server";
 
-export async function GET() {
+export async function GET(Request,{params}) {
 
+    const pageCount = params.pageCount;
     try {
-      const data = await request(process.env.ANILIST_GRAPHQL_URL,TrendingAnimeQuery,{page: 1,perPage:15});
+      const data = await request(process.env.ANILIST_GRAPHQL_URL,PopularAnimeQuery,{page: pageCount,perPage:50});
+      console.log("request got on popular" + pageCount)
       return NextResponse.json(data, {
         status: 200,
         headers: {
-          'Cache-Control': 'maxage=86400, stale-while-revalidate',
+          'Cache-Control': 'max-age=86400',
         },
       });
     } catch (error) {

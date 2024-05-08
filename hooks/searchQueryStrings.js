@@ -123,7 +123,7 @@ export let favouritesAnimeQuery = `
 
 export let searchAnimeQuery = `
 	query($search: String) {
-		Page(page: 1, perPage: 100) {
+		Page(page: 1, perPage: 50) {
 			media(search: $search, type: ANIME, sort: POPULARITY_DESC) {
 				idMal
 				title {

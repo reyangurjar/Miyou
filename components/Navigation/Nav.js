@@ -23,7 +23,7 @@ function Nav() {
           <Link className="mx-6 font-normal text-white hover:text-gray-400" href="/trending/1">Trending</Link>
           <Link className="mx-6 font-normal text-white hover:text-gray-400" href="/popular/1">Popular</Link>
           <Link className="mx-6 font-normal text-white hover:text-gray-400" href="/favourites/1">Favourites</Link>
-          <Link className="mx-6 font-normal text-white hover:text-gray-400" href="/movies">Top Movies</Link>
+          <Link className="mx-6 font-normal text-white hover:text-gray-400" href="/top100/1">Top 100</Link>
         </div>
       
 
